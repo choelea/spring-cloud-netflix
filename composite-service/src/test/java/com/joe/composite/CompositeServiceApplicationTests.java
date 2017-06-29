@@ -1,4 +1,4 @@
-package com.hanover.composite;
+package com.joe.composite;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

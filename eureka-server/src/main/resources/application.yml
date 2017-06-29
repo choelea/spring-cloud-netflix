@@ -1,9 +1,5 @@
-
-
 server:
-  port: ${vcap.application.port:8761}
-
-
+  port: 8761
 
 eureka:
   client:
