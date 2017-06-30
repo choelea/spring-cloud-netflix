@@ -1,0 +1,19 @@
+eureka:
+  overrides: 1
+  heartbeatInterval: 999
+  registryFetchInterval: 999
+  registerWithEureka: true
+  fetchRegistry: false
+  host: localhost
+  port: 8761
+  servicePath: '/eureka/apps/'
+  ssl: false
+  useDns: false
+  fetchMetadata: false
+  preferIpAddress: true
+instance: 
+  app: book-service
+  vipAddress: 'localhost'
+  port: 3001
+  dataCenterInfo:
+    name: myown

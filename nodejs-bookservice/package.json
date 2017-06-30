@@ -1,0 +1,11 @@
+{
+  "name": "nodejs-bookservice",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node ./server.js"
+  },
+  "dependencies": {
+    "eureka-js-client": "^4.3.0",
+    "express": "^4.12.4"
+  }
+}
