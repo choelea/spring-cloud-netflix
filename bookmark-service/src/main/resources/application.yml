@@ -1,6 +1,6 @@
 
 server:
-  port: ${vcap.application.port:9098}
+  port: 9098
 
 spring:
   jpa:
@@ -10,12 +10,4 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: ${vcap.services.eureka-service.credentials.uri:http://127.0.0.1:8761}/eureka/
-
----
-spring:
-  profiles: cloud
-#eureka:
-#  instance:
-#    hostname: ${APPLICATION_DOMAIN}
-#    nonSecurePort: 80
+      defaultZone: http://127.0.0.1:8761/eureka/
