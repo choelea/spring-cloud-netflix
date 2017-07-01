@@ -1,0 +1,15 @@
+eureka:
+  overrides: 1
+  custom: 'test'
+  heartbeatInterval: 999
+  registryFetchInterval: 999
+  registerWithEureka: false
+  fetchRegistry: true
+  host: localhost
+  port: 8761
+  servicePath: '/eureka/apps/'
+  ssl: false
+  useDns: false
+  fetchMetadata: false
+  preferIpAddress: true
+instance: {}

@@ -1,0 +1,15 @@
+<section style="text-align:center;">
+    <h2>Bookmarks</h2>
+    <ul>
+    {{#each model.bookmarks}}
+        <li class="list-group-item"><span>{{this.href}}</span></li>
+    {{/each}}
+    </ul>
+
+    <h2>Books</h2>
+    <ul>
+    {{#each model.books}}
+        <li class="list-group-item"><span>{{this.bookname}}</span></li>
+    {{/each}}
+    </ul>
+</section>
