@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import javax.persistence.Entity;
@@ -38,6 +39,19 @@ public class BookmarkServiceApplication {
     }
 }
 
+/**
+ * Just for testing
+ * @author Administrator
+ *
+ */
+@RestController
+class ErrorController{
+	@RequestMapping(value = "/500", method = RequestMethod.GET)
+    @ResponseStatus(code=HttpStatus.INTERNAL_SERVER_ERROR)
+    Bookmark internalError() {
+        return new Bookmark("000","wrong","Internal Error Happened","No lable");
+    }
+}
 @RestController
 @RequestMapping("/{userId}/bookmarks")
 class BookmarkRestController {
@@ -54,8 +68,8 @@ class BookmarkRestController {
     Bookmark getBookmark(@PathVariable String userId,
                          @PathVariable Long bookmarkId) {
         return this.bookmarkRepository.findByUserIdAndId(userId, bookmarkId);
-    }
-
+    }    
+    
     @RequestMapping(method = RequestMethod.POST)
     Bookmark createBookmark(@PathVariable String userId,
                             @RequestBody Bookmark bookmark) {
