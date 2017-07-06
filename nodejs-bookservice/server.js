@@ -17,10 +17,11 @@ app.listen(3001, function () {
 })
 const client = new Eureka({
   instance: {
-    instanceId: 'book-service',
+    instanceId: 'book-service-01',
     app: 'book-service',
     hostName: 'localhost',
     ipAddr: '127.0.0.1',
+    // preferIpAddress: true, // default is false and host will be used.
     // homePageUrl: 'http://localhost:3001/info',
     statusPageUrl: 'http://localhost:3001/info',
     // healthCheckUrl: 'http://localhost:3001/info',
@@ -29,7 +30,7 @@ const client = new Eureka({
       '@enabled': 'true',
     },
     vipAddress: 'book-service', // Important, otherwise spring-apigateway cannot find instance of book-service
-    secureVipAddress: 'book-service',
+    // secureVipAddress: 'book-service',
     dataCenterInfo: {
       '@class': 'com.netflix.appinfo.InstanceInfo$DefaultDataCenterInfo',
       name: 'MyOwn',
