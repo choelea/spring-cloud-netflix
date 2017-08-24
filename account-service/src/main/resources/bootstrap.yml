@@ -1,3 +1,3 @@
 spring:
   application:
-    name: bookmark-service
+    name: account-service
