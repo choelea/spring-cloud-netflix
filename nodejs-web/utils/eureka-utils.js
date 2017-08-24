@@ -1,6 +1,10 @@
 module.exports = {
     bookMarkVipAdress: "bookmark-service",
     bookVipAdress: "book-service",
+    accountVipAddress: "account-service",
+    getAccountRootUrl: function (client) {
+        return this.getRootUrlByVipAdress(client, this.accountVipAddress);
+    },
     getBookmarkRootUrl: function (client) {
         return this.getRootUrlByVipAdress(client, this.bookMarkVipAdress);
     },
