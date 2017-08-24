@@ -6,7 +6,9 @@ spring:
   jpa:
     generate-ddl: true
 
-
+management:
+  security:
+    enabled: false
 eureka:
   client:
     serviceUrl:
