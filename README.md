@@ -1,6 +1,8 @@
 ##Spring Cloud Netflix / Nodejs
 尝试使用Spring Cloud Netflix 加 Nodejs 技术栈混合搭建微服务。 （示例并无任何业务意义，只为做演示）
-**代码：** https://github.com/choelea/spring-cloud-netflix/  **ref：** tags/micros-service-hybrid-demo
+> 此库不在有更新，其演进版参考https://github.com/choelea/spring-cloud-nodejs, 在此基础上增加了全链路跟踪，服务监控及跨服务日志跟踪
+
+**代码：** https://github.com/choelea/spring-cloud-netflix/  **ref：** tags/micros-service-hybrid-demo
 ###  相关版本依赖
 **Spring Boot：** 1.5.4.RELEASE
 **Spring Cloud: ** Dalston.SR1
